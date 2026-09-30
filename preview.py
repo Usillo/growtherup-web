@@ -17,7 +17,9 @@ class H(BaseHTTPRequestHandler):
         try: r=urllib.request.urlopen(req)
         except urllib.error.HTTPError as e: r=e
         body=r.read(); ct=r.headers.get('Content-Type','')
-        if 'text/html' in ct: body=body.replace(b'</head>',INJECT,1)
+        if 'text/html' in ct:
+            inj=b'<link rel="stylesheet" href="/__local/confirmacion.css"></head>' if self.path.startswith('/confirmacion') else INJECT
+            body=body.replace(b'</head>',inj,1)
         self.send_response(r.status); self.send_header('Content-Type',ct)
         self.send_header('Content-Length',str(len(body))); self.end_headers(); self.wfile.write(body)
     def log_message(self,*a): pass
