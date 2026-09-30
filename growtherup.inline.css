@@ -72,7 +72,7 @@ body,.c-section,.c-row,.c-column{font-family:var(--gu-body)!important}
 #image-VzcutFmqUM img{border-radius:18px}
 
 /* Flechas: imagen nueva para fondo oscuro (el negro se funde con el fondo) */
-#image-I5qgae5dv7 img{width:100%!important;height:auto!important;max-width:520px;
+#image-I5qgae5dv7 img{content:url('https://cdn.jsdelivr.net/gh/Usillo/growtherup-web@v1.2/flechas.webp');width:100%!important;height:auto!important;max-width:520px;
   object-fit:contain;mix-blend-mode:lighten;margin-inline:auto;display:block}
 
 /* Métricas (color sólido: el degradado en texto oculta el emoji ✅) */
@@ -106,8 +106,3 @@ body,.c-section,.c-row,.c-column{font-family:var(--gu-body)!important}
 /* Formularios / calendario */
 iframe{border-radius:16px}
 .form-builder--wrap input,.form-builder--wrap select,.form-builder--wrap textarea{font-family:var(--gu-body)!important}
-
-/* Aparición al hacer scroll (activado por growtherup.js) */
-.gu-reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
-.gu-reveal.gu-in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.gu-reveal{opacity:1;transform:none;transition:none}}
