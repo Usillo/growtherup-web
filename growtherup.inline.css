@@ -16,7 +16,7 @@ html,body{background:var(--gu-bg)!important;scroll-behavior:smooth}
 body,.c-section,.c-row,.c-column{font-family:var(--gu-body)!important}
 
 /* Secciones */
-#section-NXE5KwLlc9,#section-xgspAdtBvC,#section-bXPa7kA_3o,#section-oe_g89bIJn,#section-GgOW9zGTHM{
+#section-NXE5KwLlc9,#section-xgspAdtBvC,#section-TmDkPtllEn,#section-bXPa7kA_3o,#section-oe_g89bIJn,#section-GgOW9zGTHM{
   background-color:var(--gu-bg)!important;background-image:none!important;color:var(--gu-text)!important}
 #section-NXE5KwLlc9{
   background-image:radial-gradient(60% 50% at 50% 0%,rgba(74,222,128,.18),transparent 70%),
@@ -81,14 +81,14 @@ body,.c-section,.c-row,.c-column{font-family:var(--gu-body)!important}
   font-family:var(--gu-body)!important;font-size:15px!important;font-weight:400!important;color:var(--gu-mute)!important;letter-spacing:0!important}
 
 /* Testimonios: tarjetas */
-#section-bXPa7kA_3o .c-column:not(#col-8wdu0LwuyC){
+#section-TmDkPtllEn .c-column:not(#col-8wdu0LwuyC){
   background:var(--gu-card)!important;border:1px solid var(--gu-line)!important;border-radius:20px!important;
   padding:14px!important;transition:transform .3s ease,border-color .3s ease}
-#section-bXPa7kA_3o .c-column:not(#col-8wdu0LwuyC):hover{transform:translateY(-6px);border-color:rgba(74,222,128,.45)!important}
-#section-bXPa7kA_3o .c-column{justify-content:flex-start!important}
-#section-bXPa7kA_3o .c-column h1,#section-bXPa7kA_3o .c-column h1 *{font-weight:600!important;line-height:1.3!important}
-#section-bXPa7kA_3o .c-column .c-paragraph,#section-bXPa7kA_3o .c-column .c-paragraph *,
-#section-bXPa7kA_3o .c-column .c-sub-heading *{color:#c3cec8!important;line-height:1.55!important;font-style:italic!important}
+#section-TmDkPtllEn .c-column:not(#col-8wdu0LwuyC):hover{transform:translateY(-6px);border-color:rgba(74,222,128,.45)!important}
+#section-TmDkPtllEn .c-column{justify-content:flex-start!important}
+#section-TmDkPtllEn .c-column h1,#section-TmDkPtllEn .c-column h1 *{font-weight:600!important;line-height:1.3!important}
+#section-TmDkPtllEn .c-column .c-paragraph,#section-TmDkPtllEn .c-column .c-paragraph *,
+#section-TmDkPtllEn .c-column .c-sub-heading *{color:#c3cec8!important;line-height:1.55!important;font-style:italic!important}
 .c-video,.c-video video,.c-video iframe{border-radius:14px!important;overflow:hidden}
 .c-image img{border-radius:14px}
 
@@ -138,18 +138,18 @@ iframe{border-radius:16px}
 #sub-heading-CltL3TK9ht *,#sub-heading-0XfYlfrDg9 *,#sub-heading-hh9nx5JdVW *{font-size:17px!important}
 
 /* Testimonios: nombre de la persona */
-#section-bXPa7kA_3o .c-row .c-row .c-column .c-heading h1,
-#section-bXPa7kA_3o .c-row .c-row .c-column .c-heading h1 *{font-size:16px!important}
+#section-TmDkPtllEn .c-row .c-row .c-column .c-heading h1,
+#section-TmDkPtllEn .c-row .c-row .c-column .c-heading h1 *{font-size:16px!important}
 
 /* Testimonios: frase */
-#section-bXPa7kA_3o .c-column .c-paragraph,#section-bXPa7kA_3o .c-column .c-paragraph *,
-#section-bXPa7kA_3o .c-column .c-sub-heading *{font-size:17px!important}
+#section-TmDkPtllEn .c-column .c-paragraph,#section-TmDkPtllEn .c-column .c-paragraph *,
+#section-TmDkPtllEn .c-column .c-sub-heading *{font-size:17px!important}
 
 /* ----- TÍTULOS de secciones ----- */
 
 /* Título: "Testimonios REALES y casos de EXITO:" */
-#section-bXPa7kA_3o #heading-EsMjel7ZhR h1,
-#section-bXPa7kA_3o #heading-EsMjel7ZhR h1 *{font-size:clamp(28px,3.6vw,38px)!important;font-weight:700!important;text-align:center}
+#section-TmDkPtllEn #heading-EsMjel7ZhR h1,
+#section-TmDkPtllEn #heading-EsMjel7ZhR h1 *{font-size:clamp(28px,3.6vw,38px)!important;font-weight:700!important;text-align:center}
 
 /* Título: "Únete a Nuestro Portfolio de Agentes Exitosos" */
 #section-oe_g89bIJn #heading-t5rycRJ2xa h1,
