@@ -67,6 +67,10 @@ body,.c-section,.c-row,.c-column{font-family:var(--gu-body)!important}
 /* Imagen garantía */
 #image-VzcutFmqUM img{border-radius:18px}
 
+/* Flechas: imagen nueva para fondo oscuro (el negro se funde con el fondo) */
+#image-I5qgae5dv7 img{width:100%!important;height:auto!important;max-width:520px;
+  object-fit:contain;mix-blend-mode:lighten;margin-inline:auto;display:block}
+
 /* Métricas (color sólido: el degradado en texto oculta el emoji ✅) */
 #sub-heading-xA7d2bKkNg h1,#sub-heading-0k_2bvRGUi h2,#sub-heading-OWqisJK1zR h1,
 #sub-heading-xA7d2bKkNg h1 *,#sub-heading-0k_2bvRGUi h2 *,#sub-heading-OWqisJK1zR h1 *{

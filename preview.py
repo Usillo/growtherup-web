@@ -9,7 +9,7 @@ class H(BaseHTTPRequestHandler):
             f=os.path.join(HERE,self.path[9:].split('?')[0])
             if os.path.isfile(f):
                 self.send_response(200)
-                self.send_header('Content-Type','text/css' if f.endswith('.css') else 'application/javascript')
+                self.send_header('Content-Type',{'css':'text/css','js':'application/javascript','webp':'image/webp'}.get(f.rsplit('.',1)[-1],'application/octet-stream'))
                 self.send_header('Cache-Control','no-store'); self.end_headers()
                 return self.wfile.write(open(f,'rb').read())
             self.send_response(404); return self.end_headers()
