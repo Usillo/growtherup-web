@@ -46,6 +46,9 @@ body,.c-section,.c-row,.c-column{font-family:var(--gu-body)!important}
   --appointment_widgets-blur-color:#111815b3;
   --appointment_widgets-light-primary-color:rgba(74,222,128,.12)}
 
+/* Indicador de carga (spinner) en los colores de marca */
+.bt-spinner{border-color:rgba(255,255,255,.12)!important;border-top-color:var(--gu-accent)!important}
+
 /* Tarjeta contenedora */
 .appointment_widgets--revamp--inner{
   background:var(--gu-card)!important;border:1px solid var(--gu-line)!important;border-radius:20px!important;
@@ -79,29 +82,39 @@ body,.c-section,.c-row,.c-column{font-family:var(--gu-body)!important}
   background:linear-gradient(135deg,var(--gu-accent),var(--gu-accent2))!important;color:#04130a!important;font-weight:700!important}
 
 /* Horarios disponibles */
-.widgets-time-slot span{
+#calendarAppointmentBookingMain .widgets-time-slot:not(.actived) span,.widgets-time-slot span{
   background:rgba(74,222,128,.08)!important;border:1px solid rgba(74,222,128,.35)!important;color:var(--gu-accent)!important;
   border-radius:12px!important;font-weight:600;transition:background .2s ease,border-color .2s ease}
 .widgets-time-slot:hover span{background:rgba(74,222,128,.16)!important;border-color:rgba(74,222,128,.6)!important}
-.widgets-time-slot.actived span{background:rgba(255,255,255,.06)!important;border-color:var(--gu-line)!important;color:var(--gu-text)!important}
+/* Horario seleccionado: GHL lo pinta con la variable "gris suave"; se cambia solo ahí dentro */
+.widgets-time-slot.actived{--appointment_widgets-light-text-color:rgba(255,255,255,.10)}
+#calendarAppointmentBookingMain .widgets-time-slot.actived span{
+  border:1px solid var(--gu-line)!important;color:var(--gu-text)!important}
 .widgets-time-slot .btn.selected-slot{
   background:linear-gradient(135deg,var(--gu-accent),var(--gu-accent2))!important;color:#04130a!important;border:0!important;
   border-radius:12px!important;font-weight:700!important;box-shadow:0 8px 24px -8px rgba(74,222,128,.55)!important}
 
 /* ===== Formulario de datos (paso siguiente) ===== */
-.ghl-form-wrap,.form-builder--wrap,#_builder-form{background:transparent!important;background-color:transparent!important;box-shadow:none!important}
-.form-builder--wrap *{font-family:var(--gu-body)!important}
-.form-builder--wrap,.form-builder--wrap label,.form-builder--wrap .short-label,.form-builder--wrap span,.form-builder--wrap strong,
-.form-builder--wrap p,.form-builder--wrap div{color:var(--gu-text)}
-.form-builder--wrap .short-label{color:var(--gu-mute)!important}
-.form-builder--wrap .heading-element,.form-builder--wrap .heading-element *{
+.ghl-form-wrap,#_builder-form,#_builder-form.form-builder--wrap{
+  background:transparent!important;background-color:transparent!important;box-shadow:none!important}
+#_builder-form.form-builder--wrap{
+  border:1px solid var(--gu-line)!important;border-radius:16px!important}
+#_builder-form,#_builder-form *{font-family:var(--gu-body)!important}
+#_builder-form label,#_builder-form label *,#_builder-form .field-label,#_builder-form strong,
+#_builder-form .form-builder--item span,#_builder-form p{color:var(--gu-text)!important}
+#_builder-form .short-label{color:var(--gu-mute)!important}
+#_builder-form .heading-element,#_builder-form .heading-element *,#_builder-form .form-builder--item.heading-element span{
   font-family:var(--gu-head)!important;color:var(--gu-warn)!important;font-weight:700!important;letter-spacing:-.01em}
-.form-builder--wrap input.form-control,.form-builder--wrap input.countryphone,.form-builder--wrap textarea,.form-builder--wrap select{
-  background:var(--gu-bg2)!important;color:var(--gu-text)!important;border:1px solid var(--gu-line)!important;border-radius:12px!important}
-.form-builder--wrap input::placeholder,.form-builder--wrap textarea::placeholder{color:rgba(163,176,169,.6)!important}
-.form-builder--wrap input.form-control:focus,.form-builder--wrap input.countryphone:focus,.form-builder--wrap textarea:focus{
+/* Campos: el formulario de GHL usa selectores muy específicos; el ID doble los supera */
+#_builder-form#_builder-form input.form-control,#_builder-form#_builder-form input.countryphone,
+#_builder-form#_builder-form input[type=text],#_builder-form#_builder-form input[type=email],
+#_builder-form#_builder-form input[type=tel],#_builder-form#_builder-form textarea,#_builder-form#_builder-form select{
+  background:var(--gu-bg2)!important;background-color:var(--gu-bg2)!important;color:var(--gu-text)!important;
+  -webkit-text-fill-color:var(--gu-text)!important;border:1px solid var(--gu-line)!important;border-radius:12px!important}
+#_builder-form input::placeholder,#_builder-form textarea::placeholder{color:rgba(163,176,169,.6)!important}
+#_builder-form#_builder-form input.form-control:focus,#_builder-form#_builder-form input.countryphone:focus,#_builder-form#_builder-form textarea:focus{
   border-color:var(--gu-accent)!important;box-shadow:0 0 0 3px rgba(74,222,128,.18)!important;outline:none!important}
-.form-builder--wrap input[type=radio],.form-builder--wrap input[type=checkbox]{accent-color:var(--gu-accent)}
+#_builder-form input[type=radio],#_builder-form input[type=checkbox]{accent-color:var(--gu-accent)}
 /* Selector de país del teléfono */
 .iti__country-list{background:var(--gu-card)!important;color:var(--gu-text)!important;border:1px solid var(--gu-line)!important}
 .iti__country.iti__highlight,.iti__country:hover{background:rgba(74,222,128,.14)!important}
