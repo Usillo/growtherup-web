@@ -1,0 +1,140 @@
+/* Growther Up — Página del calendario de agenda (dark + acento verde) */
+/* Fuentes (via @font-face: el @import no funciona dentro del Custom CSS de GHL) */
+@font-face{font-family:'GU Display';font-style:normal;font-weight:400 800;font-display:swap;src:url(https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGGInHWVyNJtvI.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'GU Display';font-style:normal;font-weight:400 800;font-display:swap;src:url(https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9K6as8bTXq_nANBjzKo3IeZx8z6up5BeSl9D4dj_x9PpZBMlGIInHWVyNJ.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'GU Text';font-style:normal;font-weight:400 800;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'GU Text';font-style:normal;font-weight:400 800;font-display:swap;src:url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
+:root{
+  --gu-bg:#07090a; --gu-bg2:#0d1210; --gu-card:#111815; --gu-line:rgba(255,255,255,.09);
+  --gu-text:#f2f5f3; --gu-mute:#a3b0a9; --gu-accent:#4ade80; --gu-accent2:#a3e635; --gu-warn:#fbbf24;
+  --gu-head:'GU Display','Bricolage Grotesque','Inter',system-ui,sans-serif;
+  --gu-body:'GU Text','Inter',system-ui,sans-serif;
+}
+
+html,body{background:var(--gu-bg)!important;scroll-behavior:smooth}
+body,.c-section,.c-row,.c-column{font-family:var(--gu-body)!important}
+
+/* Secciones */
+#section-qHhB2gKNT,#section-83StVHh2rB{
+  background-color:var(--gu-bg)!important;background-image:none!important;color:var(--gu-text)!important}
+#section-qHhB2gKNT{
+  background-image:radial-gradient(60% 40% at 50% 0%,rgba(74,222,128,.18),transparent 70%),
+                   radial-gradient(40% 30% at 90% 20%,rgba(163,230,53,.07),transparent 70%)!important}
+#section-83StVHh2rB{border-top:1px solid var(--gu-line)}
+
+/* ===== Aviso de arriba: "POR FAVOR, AGENDA SOLO SI PUEDES ASISTIR…" ===== */
+#sub-heading-9xbQ4Txifu,#sub-heading-9xbQ4Txifu > *,#sub-heading-9xbQ4Txifu .text-output,#sub-heading-9xbQ4Txifu .text-output > div,
+.csub-heading-9xbQ4Txifu,.hl_page-preview--content .csub-heading-9xbQ4Txifu{
+  background:transparent!important;background-color:transparent!important;box-shadow:none!important}
+#sub-heading-9xbQ4Txifu .text-output{text-align:center}
+#sub-heading-9xbQ4Txifu h1,#sub-heading-9xbQ4Txifu h1 *{
+  font-family:var(--gu-body)!important;font-weight:600!important;letter-spacing:.06em!important;text-transform:uppercase;
+  color:var(--gu-warn)!important;font-style:normal!important}
+#sub-heading-9xbQ4Txifu h1{
+  display:inline-block;background:rgba(251,191,36,.10)!important;border:1px solid rgba(251,191,36,.35);
+  padding:10px 18px;border-radius:20px;line-height:1.5!important;max-width:100%;text-align:center}
+
+/* ===== Calendario (widget de GHL) ===== */
+/* Colores base del widget: GHL los lee de estas variables */
+#calendarAppointmentBookingMain,#calendarAppointmentBookingMain .hl-app,.appointment_widgets--revamp--inner{
+  --appointment_widgets-primary-color:#4ade80;
+  --appointment_widgets-background-color:#111815;
+  --appointment_widgets-border-color:rgba(255,255,255,.09);
+  --appointment_widgets-text-color:#f2f5f3;
+  --appointment_widgets-light-text-color:#a3b0a9;
+  --appointment_widgets-blur-color:#111815b3;
+  --appointment_widgets-light-primary-color:rgba(74,222,128,.12)}
+
+/* Tarjeta contenedora */
+.appointment_widgets--revamp--inner{
+  background:var(--gu-card)!important;border:1px solid var(--gu-line)!important;border-radius:20px!important;
+  box-shadow:0 30px 80px -30px rgba(0,0,0,.9)!important;overflow:hidden}
+.appointment_widgets--revamp--inner *{font-family:var(--gu-body)}
+.appointment_widgets--revamp--neo-calendar-logo{border-radius:14px}
+
+/* Títulos y textos */
+.widgets--service-name,.label-select-date{
+  font-family:var(--gu-head)!important;font-weight:700!important;letter-spacing:-.02em;color:var(--gu-text)!important}
+.calendar-description,.calendar-description *,.booking-info--datetime,.booking-info--timezone,
+.appointment_widgets--revamp--service-info,.appointment_widgets--revamp--info{color:var(--gu-mute)!important}
+.calendar-description strong,.calendar-description b{color:var(--gu-text)!important}
+.show-more-description{color:var(--gu-accent)!important}
+.timezone-label{color:var(--gu-text)!important}
+
+/* Selector de mes */
+.vdpPeriodControl button,.vdpPeriodControl select{
+  color:var(--gu-text)!important;background:transparent!important;font-family:var(--gu-head)!important;font-weight:600!important}
+.vdpPeriodControl select option{background:var(--gu-card);color:var(--gu-text)}
+.arrowNext,.arrowPrevious{color:var(--gu-accent)!important}
+.arrowNext{background:rgba(74,222,128,.12)!important}
+
+/* Días de la semana y días del mes */
+.vdpHeadCell,.vdpHeadCellContent{color:var(--gu-mute)!important;font-weight:500!important}
+.vdpCell .vdpCellContent{color:var(--gu-text)!important;transition:background .2s ease,transform .2s ease}
+.vdpCell.disabled .vdpCellContent,.vdpCell.outOfRange .vdpCellContent{color:rgba(163,176,169,.35)!important}
+.vdpCell.selectable:hover .vdpCellContent{background:rgba(74,222,128,.16)!important}
+.vdpCell.today .vdpCellContent{box-shadow:inset 0 0 0 1px rgba(74,222,128,.5)}
+.vdpCell.selected .vdpCellContent{
+  background:linear-gradient(135deg,var(--gu-accent),var(--gu-accent2))!important;color:#04130a!important;font-weight:700!important}
+
+/* Horarios disponibles */
+.widgets-time-slot span{
+  background:rgba(74,222,128,.08)!important;border:1px solid rgba(74,222,128,.35)!important;color:var(--gu-accent)!important;
+  border-radius:12px!important;font-weight:600;transition:background .2s ease,border-color .2s ease}
+.widgets-time-slot:hover span{background:rgba(74,222,128,.16)!important;border-color:rgba(74,222,128,.6)!important}
+.widgets-time-slot.actived span{background:rgba(255,255,255,.06)!important;border-color:var(--gu-line)!important;color:var(--gu-text)!important}
+.widgets-time-slot .btn.selected-slot{
+  background:linear-gradient(135deg,var(--gu-accent),var(--gu-accent2))!important;color:#04130a!important;border:0!important;
+  border-radius:12px!important;font-weight:700!important;box-shadow:0 8px 24px -8px rgba(74,222,128,.55)!important}
+
+/* ===== Formulario de datos (paso siguiente) ===== */
+.ghl-form-wrap,.form-builder--wrap,#_builder-form{background:transparent!important;background-color:transparent!important;box-shadow:none!important}
+.form-builder--wrap *{font-family:var(--gu-body)!important}
+.form-builder--wrap,.form-builder--wrap label,.form-builder--wrap .short-label,.form-builder--wrap span,.form-builder--wrap strong,
+.form-builder--wrap p,.form-builder--wrap div{color:var(--gu-text)}
+.form-builder--wrap .short-label{color:var(--gu-mute)!important}
+.form-builder--wrap .heading-element,.form-builder--wrap .heading-element *{
+  font-family:var(--gu-head)!important;color:var(--gu-warn)!important;font-weight:700!important;letter-spacing:-.01em}
+.form-builder--wrap input.form-control,.form-builder--wrap input.countryphone,.form-builder--wrap textarea,.form-builder--wrap select{
+  background:var(--gu-bg2)!important;color:var(--gu-text)!important;border:1px solid var(--gu-line)!important;border-radius:12px!important}
+.form-builder--wrap input::placeholder,.form-builder--wrap textarea::placeholder{color:rgba(163,176,169,.6)!important}
+.form-builder--wrap input.form-control:focus,.form-builder--wrap input.countryphone:focus,.form-builder--wrap textarea:focus{
+  border-color:var(--gu-accent)!important;box-shadow:0 0 0 3px rgba(74,222,128,.18)!important;outline:none!important}
+.form-builder--wrap input[type=radio],.form-builder--wrap input[type=checkbox]{accent-color:var(--gu-accent)}
+/* Selector de país del teléfono */
+.iti__country-list{background:var(--gu-card)!important;color:var(--gu-text)!important;border:1px solid var(--gu-line)!important}
+.iti__country.iti__highlight,.iti__country:hover{background:rgba(74,222,128,.14)!important}
+.iti__selected-flag{background:transparent!important}
+.iti__dial-code{color:var(--gu-mute)!important}
+/* Botón final "¡Agendar Llamada de Consulta!" */
+.btn.btn-schedule{
+  background:linear-gradient(135deg,var(--gu-accent),var(--gu-accent2))!important;color:#04130a!important;border:0!important;
+  border-radius:999px!important;font-family:var(--gu-head)!important;font-weight:700!important;
+  box-shadow:0 10px 40px -8px rgba(74,222,128,.55),inset 0 1px 0 rgba(255,255,255,.4)!important;
+  transition:transform .25s ease,box-shadow .25s ease!important}
+.btn.btn-schedule:hover{transform:translateY(-3px) scale(1.02)!important;box-shadow:0 16px 50px -8px rgba(74,222,128,.75)!important}
+
+/* ===== Footer (texto legal) ===== */
+#section-83StVHh2rB,#section-83StVHh2rB *{color:#6f7d76!important;font-family:var(--gu-body)!important;font-weight:400!important}
+#section-83StVHh2rB a{color:var(--gu-accent)!important}
+
+/* =====================================================================
+   PANEL DE TAMAÑOS — edita solo los números (px)
+   Tamaño fijo: 16px  |  Tamaño adaptable: clamp(mínimo celular, ideal, máximo computador)
+   ===================================================================== */
+
+/* Aviso de arriba ("POR FAVOR, AGENDA SOLO SI PUEDES ASISTIR…") */
+#sub-heading-9xbQ4Txifu h1,#sub-heading-9xbQ4Txifu h1 *{font-size:clamp(12px,3.2vw,15px)!important}
+
+/* Calendario: nombre del servicio ("Sesión Estratégica de Consulta") */
+.widgets--service-name{font-size:clamp(20px,2.4vw,24px)!important}
+
+/* Calendario: "Seleccione la Fecha & Hora" */
+.label-select-date{font-size:18px!important}
+
+/* Formulario: título ("Esta llamada es solo para Realtors comprometidos…") */
+.form-builder--wrap .heading-element,.form-builder--wrap .heading-element *{font-size:clamp(18px,2.4vw,21px)!important}
+
+/* Footer */
+#section-83StVHh2rB,#section-83StVHh2rB *{font-size:13px!important}
